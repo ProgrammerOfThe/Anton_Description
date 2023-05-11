@@ -5,7 +5,8 @@ Space Titan Documentation
 This took me about 3 and half weeks to make, and their is alot more things I didn't mention inside of this documentation
 
 ## Inspiration
-I kind of got inspired by Chat gpt, and I always kind of wanted to build my own Ai chatbot that I can talk to and
+I kind of got inspired by Chat gpt, and I always kind of wanted to build my own Ai chatbot that I can talk to and just work on in my free times.
+
 ## Space Titan Description
 
 Space Titan is an AI that can run without requiring Wi-Fi and utilizes one of the fastest algorithms available. Its code is optimized to operate on any Mac computer, as it utilizes specific libraries exclusive to Mac OS systems.
