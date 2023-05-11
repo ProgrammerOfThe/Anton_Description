@@ -1,30 +1,32 @@
-Anton Documentation
+Space Titan Documentation
 ===============
 
 ## Time Frame
 This took me about 3 and half weeks to make, and their is alot more things I didn't mention inside of this documentation
 
-## Anton Description
+## Inspiration
+I kind of got inspired by Chat gpt, and I always kind of wanted to build my own Ai chatbot that I can talk to and
+## Space Titan Description
 
-Anton is an AI that can run without requiring Wi-Fi and utilizes one of the fastest algorithms available. Its code is optimized to operate on any Mac computer, as it utilizes specific libraries exclusive to Mac OS systems.
+Space Titan is an AI that can run without requiring Wi-Fi and utilizes one of the fastest algorithms available. Its code is optimized to operate on any Mac computer, as it utilizes specific libraries exclusive to Mac OS systems.
 
 ## Code Description
 
-Anton has a huge amount of features used, and this will be a long page. So I will only show important things in Antons Source Code.
+Space Titan has a huge amount of features used, and this will be a long page. So I will only show important things in Space Titan Source Code.
 
 ###### Algorthim Used
-Anton utilizes the [Quicksort algorithm](https://en.wikipedia.org/wiki/Quicksort) for sorting data and storing it. The algorithm efficiently sorts through the data provided to it or data accumulated on its own. With C++ being a naturally fast language, the algorithm’s performance is further enhanced.
+Space Titan utilizes the [Quicksort algorithm](https://en.wikipedia.org/wiki/Quicksort) for sorting data and storing it. The algorithm efficiently sorts through the data provided to it or data accumulated on its own. With C++ being a naturally fast language, the algorithm’s performance is further enhanced.
 
 ###### Debuge Proccess
 
-As a helpful assistant, I want to let you know that a Debugger is a useful tool for identifying and fixing bugs or errors in programming code. However, I have taken the process up a notch by enabling Anton to autocorrect itself using an automatic debugger, without requiring constant monitoring from me. To achieve this, I created functions that can pinpoint errors and provide solutions for fixing them.
+As a helpful assistant, I want to let you know that a Debugger is a useful tool for identifying and fixing bugs or errors in programming code. However, I have taken the process up a notch by enabling Space Titan to autocorrect itself using an automatic debugger, without requiring constant monitoring from me. To achieve this, I created functions that can pinpoint errors and provide solutions for fixing them.
 
 ```cpp
 int WrongPasswordFunction(){
 
-  std::string password = "AntonMadeThisPasswordItContainsMoreCharactersThenANormalPassword912345";
+  std::string password = "Space TitanMadeThisPasswordItContainsMoreCharactersThenANormalPassword912345";
   std::string ErrorPassword;
-  // std::cout << "Wrong Password This will be reported to Antons Internal Database \n";
+  // std::cout << "Wrong Password This will be reported to Space Titan Internal Database \n";
   std::cout << "You have 1 more try to get access the to dev tools: ";
   std::cin >> ErrorPassword;
 
@@ -33,10 +35,10 @@ int WrongPasswordFunction(){
   }else{
     
     system("clear");
-    std::cout << "Wrong password this will be reported to Antons database \n";
+    std::cout << "Wrong password this will be reported to Space Titans database \n";
 
     std::ofstream ErrorFile("Wrong Password Input.txt");
-    ErrorFile << "Anton has reported a user had inputed a wrong password for the Dev tools login, This might be a secruity issue and should be checked into. \n";
+    ErrorFile << "Space Titan has reported a user had inputed a wrong password for the Dev tools login, This might be a secruity issue and should be checked into. \n";
     ErrorFile << "The user inputed " << ErrorPassword << "\n";
     ErrorFile.close();
     return false;
@@ -45,7 +47,7 @@ int WrongPasswordFunction(){
 }
 ```
 
-As seen in the code, there is a function named WrongPasswordFunction() that is triggered whenever the User enters an incorrect password. This code is executed by Anton to handle the issue and the problem is then saved in a file for future reference.
+As seen in the code, there is a function named WrongPasswordFunction() that is triggered whenever the User enters an incorrect password. This code is executed by Space Titan to handle the issue and the problem is then saved in a file for future reference.
 
 ###### Database
 
@@ -139,11 +141,11 @@ int DataBase(){
 
 This is the most current version of the database available. The code consists of an array that stores all data. Users can input data into specific indexes of the array. The code checks if the indexes are full. If they are, it informs the user that the array is full and displays the data in those specific arrays, so the user can see what's inside.
 
-There are two databases: the `Internal Database` and the `External Database`. The Internal Database contains all the data Anton collects, including private data, which is securely stored. The External Database is used for public data, such as the last time Anton was run, the last code edit, and the date and time of logins.
+There are two databases: the `Internal Database` and the `External Database`. The Internal Database contains all the data Space Titan collects, including private data, which is securely stored. The External Database is used for public data, such as the last time Space Titan was run, the last code edit, and the date and time of logins.
 
 ###### User Shell
 
-Whenever you run Anton, it has something called `The Shell`, The Shell seperates normal users from Developers, The developers have access to the source code and the very special thing called the `Dev Tools`
+Whenever you run Space Titan, it has something called `The Shell`, The Shell seperates normal users from Developers, The developers have access to the source code and the very special thing called the `Dev Tools`
 
 Dev Tools Contain:
 
@@ -151,11 +153,11 @@ Dev Tools Contain:
 > - Edit the all the code
 > - Complete access to the Internal Database
 
-Whenever Anton is ran, it will show the current Shell the user is in with their username.
+Whenever Space Titan is ran, it will show the current Shell the user is in with their username.
 
 ###### Virus
 
-I have a program that I refer to as the `Virus`. It’s designed to completely erase Anton from existence, but it’s only accessible with two passwords that are each 147 characters long and comprised of 23-29 words. 
+I have a program that I refer to as the `Virus`. It’s designed to completely erase Space Titan from existence, but it’s only accessible with two passwords that are each 147 characters long and comprised of 23-29 words. 
 
 I call it the Virus because once it's activate it, the code corrupts itself, making it unreadable to anyone who tries to access it after the fact.
 
