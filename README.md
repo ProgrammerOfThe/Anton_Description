@@ -56,87 +56,90 @@ In order for any AI to function properly, it requires a database to store inform
 
 ```cpp
 #pragma once
+//BUG
+
+// it wont save the data once the user inputs the data, and once we recall the function
 
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <unistd.h>
+#include <ctime>
+#include "GlobalVars.hpp"
 
 int DataBase(){
+  // we make a file function then we close it!
+
+  std::ofstream File;
+  File.open("External Database Data.txt");
+  File.close();
 
   std::string option;
   std::string dataInput;
   std::string dataInput2;
   std::string dataInput3;
   std::string path = "Data.txt";
-  
   int indexInserter;
-  
-    // we make a file function then we close it!
-  std::ofstream File;
-  File.open("Data.txt");
-  File.close();
-  
+
   std::string dataEntries[4] = {"DeleteThis",};
+  dataEntries[1] = "LClan";
+  dataEntries[2] = "LClan";
+  dataEntries[3] = "LClan";
+
+  
 
   std::cout << "Which index do you want your data to be inputed in, 1,2,3 \n";
   std::cin >> indexInserter;
-
+  
   switch(indexInserter){
     case 1:
-      std::cout << "Index 1 Data:";
-      std::cin.ignore();
-      std::getline(std::cin, dataInput);
-      dataEntries[1] = dataInput;
-
+      if(dataEntries[1].empty()){
+        std::cout << "Index 1 Data:";
+        std::cin.ignore();
+        std::getline(std::cin, dataInput);
+        dataEntries[1] = dataInput;
+        // sleep(2);
+      }else{
+        std::cout << "Index 1 is full, it contains " << dataEntries[1] << '\n';
+        sleep(1);
+      }
+      
       // break;
     case 2:
-      std::cout << "Index 2 Data:";
-      std::cin.ignore();
-      std::getline(std::cin, dataInput2);
-      dataEntries[2] = dataInput2;
+
+      if(dataEntries[2].empty()){
+        std::cout << "Index 2 Data:";
+        std::cin.ignore();
+        std::getline(std::cin, dataInput2);
+        dataEntries[2] = dataInput2;
+      }else{
+        std::cout << "Index 2 is full, it contains " << dataEntries[2] << '\n';
+        sleep(1);
+      }
       // break;
     case 3: 
-      std::cout << "Index 3 Data:";
+    if(dataEntries[3].empty()){
+      std::cout << "Index 3 Data:"; 
       std::cin.ignore();
       std::getline(std::cin, dataInput3);
       dataEntries[3] = dataInput3;
-      break;
+    }else{
+      std::cout << "Index 3 is full, it contains " << dataEntries[3] << '\n';
+      sleep(1);
+    }
+    break;
   }
 
-  if(dataEntries[1].empty()){
-    std::cout << "Index 1 is empty \n";
-    sleep(2);
-  }else{
-    std::cout << "Index 1 is not empty, index 1 contains " << dataInput << '\n';
-    sleep(2);
-  }
-
-  if(dataEntries[2].empty()){
-    std::cout << "Index 2 is empty \n";
-    sleep(2);
-  }else{
-    std::cout << "Index 2 is not empty, index 2 contains " << dataInput2 << '\n';
-    sleep(2);
-  }
-
-  if(dataEntries[3].empty()){
-    std::cout << "Index 3 is empty \n";
-    sleep(2);
-  }else{
-    std::cout << "Index 3 is not empty, index 3 contains " << dataInput3 << '\n';
-    sleep(2);
-  }
-
-  File.open("Data.txt");
+  File.open("External Database Data.txt");
   File << "{\n";
-  File << "   " << dataInput << '\n';
-  File << "   " << dataInput2 << '\n';
-  File << "   " << dataInput3 << '\n';
+  File << "   " << dataEntries[1] << '\n';
+  File << "   " << dataEntries[2] << '\n';
+  File << "   " << dataEntries[3] << '\n';
   File << "}\n";
   File.close();
 
   return 0;
+}
 }
 ```
 
